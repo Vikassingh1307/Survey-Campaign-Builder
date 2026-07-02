@@ -65,13 +65,18 @@ const LivePreview = () => {
   };
 
   return (
-    <div className="relative mx-auto w-[375px] h-[812px] bg-white shadow-2xl border-[8px] border-gray-900 overflow-hidden flex flex-col font-sans" style={appStyle}>
+    <div className="relative mx-auto w-[375px] h-[812px] bg-white rounded-[50px] shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] border-[12px] border-slate-800 overflow-hidden flex flex-col font-sans ring-4 ring-slate-100" style={appStyle}>
+      {/* Notch */}
+      <div className="absolute top-0 inset-x-0 h-6 w-[150px] bg-slate-800 mx-auto rounded-b-[20px] z-50 flex items-center justify-center">
+        <div className="w-12 h-1.5 bg-slate-900 rounded-full"></div>
+      </div>
+      
       {/* Mobile Top Bar Mock */}
-      <div className="h-7 w-full flex justify-between items-center px-6 pt-2 bg-transparent absolute top-0 z-50 text-black mix-blend-difference">
-        <span className="text-[12px] font-semibold">9:41</span>
-        <div className="flex gap-1">
-          <div className="w-4 h-3 bg-white rounded-sm opacity-90" />
-          <div className="w-3 h-3 bg-white rounded-full opacity-90" />
+      <div className="h-10 w-full flex justify-between items-center px-6 pt-3 bg-transparent absolute top-0 z-40 text-black mix-blend-difference opacity-80">
+        <span className="text-[13px] font-semibold tracking-tight">9:41</span>
+        <div className="flex gap-1.5">
+          <div className="w-4 h-3 bg-white rounded-[2px]" />
+          <div className="w-3.5 h-3.5 bg-white rounded-full" />
         </div>
       </div>
       
